@@ -1,6 +1,11 @@
 package com.bug0.java;
 
-public class EqualTest {
+/**
+ * test equals and hashCode methods
+ * @author Paul
+ *
+ */
+public class EqualsAndHashCodeTest {
 
 	private String key;
 
@@ -12,7 +17,7 @@ public class EqualTest {
 		this.key = key;
 	}
 
-	public EqualTest(String key) {
+	public EqualsAndHashCodeTest(String key) {
 		super();
 		this.key = key;
 	}
@@ -28,7 +33,7 @@ public class EqualTest {
 		return result;
 	}
 
-	public EqualTest() {
+	public EqualsAndHashCodeTest() {
 		super();
 	}
 
@@ -40,7 +45,7 @@ public class EqualTest {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		EqualTest other = (EqualTest) obj;
+		EqualsAndHashCodeTest other = (EqualsAndHashCodeTest) obj;
 		if (key == null) {
 			if (other.key != null)
 				return false;

@@ -98,8 +98,8 @@ public class BaseTest {
 		// : 要，因为equals和hashCode要保持一致，equals就是普通比较之用，使用较为明显，而hashCode的用处在Map和Set的Key值相等判断，相对不易察觉，两处应保持一致。
 		// equals默认使用==来比较内存地址, 和hashCode是一回事吗?
 		// : 不是, hashCode一样了, 内存地址仍不同
-		EqualTest a = new EqualTest();
-		EqualTest b = new EqualTest();
+		EqualsAndHashCodeTest a = new EqualsAndHashCodeTest();
+		EqualsAndHashCodeTest b = new EqualsAndHashCodeTest();
 		a.setKey("1");
 		b.setKey("1");
 		System.out.println(a.equals(b));
