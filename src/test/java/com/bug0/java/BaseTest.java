@@ -1,14 +1,8 @@
 package com.bug0.java;
 
-import java.io.IOException;
-import java.math.BigDecimal;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-import java.util.Base64;
-import java.util.Locale;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class BaseTest {
 
@@ -47,6 +41,9 @@ public class BaseTest {
 //		String test = "111";
 //		String result = String.valueOf(test);
 //		System.out.println(result);
+//		String test1 = null;
+//		String result1 = String.valueOf(test1);
+//		System.out.println(result1);
 
 		// 科学计数法
 //		System.out.println("科学计数法数字");
@@ -182,6 +179,20 @@ public class BaseTest {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
+		
+		// Calendar月份计算
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Calendar c = Calendar.getInstance();
+//		c.setTime(new Date());
+		try {
+			c.setTime(sdf.parse("2022-01-31"));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		System.out.println(sdf.format(c.getTime()));
+		c.add(Calendar.MONTH, 1);
+		System.out.println(sdf.format(c.getTime()));
+		
 	}
 
 }
